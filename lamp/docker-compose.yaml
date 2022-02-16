@@ -1,0 +1,39 @@
+ version: '3.1'
+ services:
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: mariadb
+
+        #  apache:
+        #    image: php:7.0-apache
+        #    ports:
+        #      - 85:80
+        #    volumes:
+        #      - /home/iriartex/demo-template-BizLand:/var/www/html
+        #    environment:
+        #      PMA_HOST: mariadb
+        #    links:
+        #      - mariadb:mariadb
+  
+  mariadb:
+    image: mariadb:10.6
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: db_home
+      MYSQL_USER: sysadmin
+      MYSQL_PASSWORD: sysadmin
+      MYSQL_ROOT_PASSWORD: toor
+  
+        #  first-app:
+        #    image: app:2.1
+        #    links: 
+        #      - mariadb:mariadb
+
+        #    ports:
+        #      - 4000:3000
+  
+    

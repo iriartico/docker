@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: mariadb:10
+    container_name: wpgains-demo-db
+    #restart: always
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./backups:/backups
+    environment:
+      MYSQL_DATABASE: wpgdemo
+      MYSQL_USER: wpgdemo_user
+      MYSQL_PASSWORD: chocolate(123)**
+      MYSQL_ROOT_PASSWORD: toor
+      
+  wordpress:
+    image: wordpress:php7.2-apache
+    container_name: wpgains-demo-wp
+    #restart: always
+    depends_on: ['db']
+    ports: ['85:80']
+    links: ['db:db']
+    volumes:
+      - ./wp-data:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wpgdemo
+      WORDPRESS_DB_USER: wpgdemo_user
+      WORDPRESS_DB_PASSWORD: chocolate(123)**
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    container_name: wpgains-demo-phpmyadmin
+    #restart: always
+    depends_on: ['db']
+    ports: ['12000:80']
+    links: ['db:db']
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=wpgdemo_user
+      - PMA_PASSWORD=chocolate(123)**
+
+
+volumes:
+  db_data: {}

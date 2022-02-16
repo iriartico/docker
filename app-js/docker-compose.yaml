@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  app:
+    image: joseco/backend:2.2
+    ports:
+      - 5000:3000
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: toor
+      DB_NAME: db_tienda
+      DB_PORT: 3306
+      
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - /home/iriartex/db_tienda:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: db_tienda
+    expose:
+      - 3306
+
+
+
