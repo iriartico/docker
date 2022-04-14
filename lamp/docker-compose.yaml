@@ -2,26 +2,27 @@
  services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5
+    container_name: phpmyadmin
     ports:
       - 8080:80
     environment:
-      PMA_HOST: mariadb
+      PMA_HOST: db
 
-        #  apache:
-        #    image: php:7.0-apache
-        #    ports:
-        #      - 85:80
-        #    volumes:
-        #      - /home/iriartex/demo-template-BizLand:/var/www/html
-        #    environment:
-        #      PMA_HOST: mariadb
-        #    links:
-        #      - mariadb:mariadb
-  
-  mariadb:
-    image: mariadb:10.6
+  apache:
+    image: php:7.0-apache
+    container_name: apache
     ports:
-      - 3307:3306
+    - 80:80
+    volumes:
+    - /home/iriartex/iPortfolio:/var/www/html
+    environment:
+      PMA_HOST: db
+  
+  db:
+    image: mariadb:10.6
+    container_name: db
+    expose:
+      - 3306
     environment:
       MYSQL_DATABASE: db_home
       MYSQL_USER: sysadmin
