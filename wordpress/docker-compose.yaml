@@ -4,7 +4,7 @@ services:
 
   db:
     image: mariadb:10
-    container_name: wpgains-demo-db
+    container_name: db
     #restart: always
     volumes:
       - ./db_data:/var/lib/mysql
@@ -16,8 +16,8 @@ services:
       MYSQL_ROOT_PASSWORD: toor
       
   wordpress:
-    image: wordpress:php7.2-apache
-    container_name: wpgains-demo-wp
+    image: wordpress:5.9.3-php7.4
+    container_name: wp
     #restart: always
     depends_on: ['db']
     ports: ['85:80']
@@ -32,7 +32,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:4.7
-    container_name: wpgains-demo-phpmyadmin
+    container_name: phpmyadmin
     #restart: always
     depends_on: ['db']
     ports: ['12000:80']

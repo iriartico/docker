@@ -1,0 +1,387 @@
+* 
+* ==> Audit <==
+* |---------|------------------|----------|----------|---------|-------------------------------|-------------------------------|
+| Command |       Args       | Profile  |   User   | Version |          Start Time           |           End Time            |
+|---------|------------------|----------|----------|---------|-------------------------------|-------------------------------|
+| delete  |                  | minikube | iriartex | v1.25.2 | Thu, 07 Apr 2022 22:55:21 -04 | Thu, 07 Apr 2022 22:55:23 -04 |
+| start   | --vm-driver kvm2 | minikube | iriartex | v1.25.2 | Thu, 07 Apr 2022 22:55:33 -04 | Thu, 07 Apr 2022 23:00:44 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 00:45:51 -04 | Fri, 08 Apr 2022 00:45:52 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 00:46:01 -04 | Fri, 08 Apr 2022 00:46:01 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 00:46:05 -04 | Fri, 08 Apr 2022 00:46:06 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 00:56:15 -04 | Fri, 08 Apr 2022 00:56:15 -04 |
+| -h      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 01:00:13 -04 | Fri, 08 Apr 2022 01:00:13 -04 |
+| stop    |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 01:00:44 -04 | Fri, 08 Apr 2022 01:01:02 -04 |
+| start   |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 01:06:47 -04 | Fri, 08 Apr 2022 01:08:12 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 01:08:55 -04 | Fri, 08 Apr 2022 01:08:56 -04 |
+| stop    |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 01:10:38 -04 | Fri, 08 Apr 2022 01:10:47 -04 |
+| -h      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 08:16:10 -04 | Fri, 08 Apr 2022 08:16:10 -04 |
+| addons  | list             | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 08:16:18 -04 | Fri, 08 Apr 2022 08:16:20 -04 |
+| start   |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 08:17:08 -04 | Fri, 08 Apr 2022 08:18:53 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 08:38:21 -04 | Fri, 08 Apr 2022 08:38:22 -04 |
+| ip      |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 08:38:31 -04 | Fri, 08 Apr 2022 08:38:31 -04 |
+| stop    |                  | minikube | iriartex | v1.25.2 | Fri, 08 Apr 2022 10:05:18 -04 | Fri, 08 Apr 2022 10:05:31 -04 |
+| delete  |                  | minikube | iriartex | v1.25.2 | Sun, 01 May 2022 08:53:42 -04 | Sun, 01 May 2022 08:53:47 -04 |
+| delete  |                  | minikube | iriartex | v1.25.2 | Mon, 23 May 2022 08:12:31 -04 | Mon, 23 May 2022 08:12:32 -04 |
+|---------|------------------|----------|----------|---------|-------------------------------|-------------------------------|
+
+* 
+* ==> Last Start <==
+* Log file created at: 2022/05/23 08:12:38
+Running on machine: manjaro
+Binary: Built with gc go1.17.7 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0523 08:12:38.521579   10999 out.go:297] Setting OutFile to fd 1 ...
+I0523 08:12:38.521681   10999 out.go:349] isatty.IsTerminal(1) = true
+I0523 08:12:38.521684   10999 out.go:310] Setting ErrFile to fd 2...
+I0523 08:12:38.521689   10999 out.go:349] isatty.IsTerminal(2) = true
+I0523 08:12:38.521788   10999 root.go:315] Updating PATH: /home/iriartex/.minikube/bin
+I0523 08:12:38.522077   10999 out.go:304] Setting JSON to false
+I0523 08:12:38.542279   10999 start.go:112] hostinfo: {"hostname":"manjaro","uptime":1747,"bootTime":1653306211,"procs":320,"os":"linux","platform":"arch","platformFamily":"arch","platformVersion":"21.2.6","kernelVersion":"5.15.38-1-MANJARO","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"b55f014e-e018-46d9-a436-68a6aa46b820"}
+I0523 08:12:38.542376   10999 start.go:122] virtualization: kvm host
+I0523 08:12:38.608009   10999 out.go:176] 😄  minikube v1.25.2 on Arch 21.2.6
+I0523 08:12:38.608240   10999 notify.go:193] Checking for updates...
+I0523 08:12:38.641905   10999 driver.go:344] Setting default libvirt URI to qemu:///system
+I0523 08:12:42.611527   10999 out.go:176] ✨  Using the kvm2 driver based on user configuration
+I0523 08:12:42.611588   10999 start.go:281] selected driver: kvm2
+I0523 08:12:42.611604   10999 start.go:798] validating driver "kvm2" against <nil>
+I0523 08:12:42.611639   10999 start.go:809] status for kvm2: {Installed:true Healthy:true Running:true NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I0523 08:12:42.612579   10999 install.go:52] acquiring lock: {Name:mk900956b073697a4aa6c80a27c6bb0742a99a53 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0523 08:12:42.612895   10999 install.go:117] Validating docker-machine-driver-kvm2, PATH=/home/iriartex/.minikube/bin:/home/iriartex/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin
+I0523 08:12:43.244538   10999 install.go:137] /usr/bin/docker-machine-driver-kvm2 version is 1.25.2
+I0523 08:12:43.244662   10999 start_flags.go:288] no existing cluster config was found, will generate one from the flags 
+I0523 08:12:43.261654   10999 start_flags.go:369] Using suggested 2200MB memory alloc based on sys=5911MB, container=0MB
+I0523 08:12:43.261747   10999 start_flags.go:397] setting extra-config: kubelet.housekeeping-interval=5m
+I0523 08:12:43.261758   10999 start_flags.go:813] Wait components to verify : map[apiserver:true system_pods:true]
+I0523 08:12:43.261776   10999 cni.go:93] Creating CNI manager for ""
+I0523 08:12:43.261782   10999 cni.go:167] CNI unnecessary in this configuration, recommending no CNI
+I0523 08:12:43.261787   10999 start_flags.go:302] config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.30@sha256:02c921df998f95e849058af14de7045efc3954d90320967418a0d1f182bbc0b2 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:kvm2 HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.23.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[{Component:kubelet Key:housekeeping-interval Value:5m}] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/iriartex:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false}
+I0523 08:12:43.267754   10999 iso.go:123] acquiring lock: {Name:mkeed4957e1991c5ae631e04da498352d2ea825c Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I0523 08:12:43.319576   10999 out.go:176] 👍  Starting control plane node minikube in cluster minikube
+I0523 08:12:43.319616   10999 preload.go:132] Checking if preload exists for k8s version v1.23.3 and runtime docker
+I0523 08:12:43.319677   10999 preload.go:148] Found local preload: /home/iriartex/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v17-v1.23.3-docker-overlay2-amd64.tar.lz4
+I0523 08:12:43.319686   10999 cache.go:57] Caching tarball of preloaded images
+I0523 08:12:43.319843   10999 preload.go:174] Found /home/iriartex/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v17-v1.23.3-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I0523 08:12:43.319860   10999 cache.go:60] Finished verifying existence of preloaded tar for  v1.23.3 on docker
+I0523 08:12:43.320309   10999 profile.go:148] Saving config to /home/iriartex/.minikube/profiles/minikube/config.json ...
+I0523 08:12:43.320329   10999 lock.go:35] WriteFile acquiring /home/iriartex/.minikube/profiles/minikube/config.json: {Name:mk48a8f6bea68c6d06ded14abb4bd9eb632ab37a Clock:{} Delay:500ms Timeout:1m0s Cancel:<nil>}
+I0523 08:12:43.320466   10999 cache.go:208] Successfully downloaded all kic artifacts
+I0523 08:12:43.320484   10999 start.go:313] acquiring machines lock for minikube: {Name:mk76b6fd7a0d20d7e1a6b974d28432c6547ee490 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0523 08:12:43.320527   10999 start.go:317] acquired machines lock for "minikube" in 33.964µs
+I0523 08:12:43.320539   10999 start.go:89] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.25.2.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.30@sha256:02c921df998f95e849058af14de7045efc3954d90320967418a0d1f182bbc0b2 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:kvm2 HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.23.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[{Component:kubelet Key:housekeeping-interval Value:5m}] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.23.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/iriartex:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false} &{Name: IP: Port:8443 KubernetesVersion:v1.23.3 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0523 08:12:43.320607   10999 start.go:126] createHost starting for "" (driver="kvm2")
+I0523 08:12:43.368882   10999 out.go:203] 🔥  Creating kvm2 VM (CPUs=2, Memory=2200MB, Disk=20000MB) ...
+I0523 08:12:43.369103   10999 main.go:130] libmachine: Found binary path at /usr/bin/docker-machine-driver-kvm2
+I0523 08:12:43.419403   10999 main.go:130] libmachine: Launching plugin server for driver kvm2
+I0523 08:12:43.448600   10999 main.go:130] libmachine: Plugin server listening at address 127.0.0.1:33241
+I0523 08:12:43.530368   10999 main.go:130] libmachine: () Calling .GetVersion
+I0523 08:12:43.531322   10999 main.go:130] libmachine: Using API Version  1
+I0523 08:12:43.531347   10999 main.go:130] libmachine: () Calling .SetConfigRaw
+I0523 08:12:43.531901   10999 main.go:130] libmachine: () Calling .GetMachineName
+I0523 08:12:43.532114   10999 main.go:130] libmachine: (minikube) Calling .GetMachineName
+I0523 08:12:43.532278   10999 main.go:130] libmachine: (minikube) Calling .DriverName
+I0523 08:12:43.532475   10999 start.go:160] libmachine.API.Create for "minikube" (driver="kvm2")
+I0523 08:12:43.532536   10999 client.go:168] LocalClient.Create starting
+I0523 08:12:43.556352   10999 main.go:130] libmachine: Reading certificate data from /home/iriartex/.minikube/certs/ca.pem
+I0523 08:12:43.565586   10999 main.go:130] libmachine: Decoding PEM data...
+I0523 08:12:43.565614   10999 main.go:130] libmachine: Parsing certificate...
+I0523 08:12:43.565737   10999 main.go:130] libmachine: Reading certificate data from /home/iriartex/.minikube/certs/cert.pem
+I0523 08:12:43.567275   10999 main.go:130] libmachine: Decoding PEM data...
+I0523 08:12:43.567310   10999 main.go:130] libmachine: Parsing certificate...
+I0523 08:12:43.567349   10999 main.go:130] libmachine: Running pre-create checks...
+I0523 08:12:43.567362   10999 main.go:130] libmachine: (minikube) Calling .PreCreateCheck
+I0523 08:12:43.567889   10999 main.go:130] libmachine: (minikube) Calling .GetConfigRaw
+I0523 08:12:43.568540   10999 main.go:130] libmachine: Creating machine...
+I0523 08:12:43.568558   10999 main.go:130] libmachine: (minikube) Calling .Create
+I0523 08:12:43.568755   10999 main.go:130] libmachine: (minikube) Creating KVM machine...
+I0523 08:12:43.583333   10999 main.go:130] libmachine: (minikube) DBG | found existing default KVM network
+I0523 08:12:43.584792   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:43.584583   11063 network.go:288] reserving subnet 192.168.39.0 for 1m0s: &{mu:{state:0 sema:0} read:{v:{m:map[] amended:true}} dirty:map[192.168.39.0:0xc0000a62e8] misses:0}
+I0523 08:12:43.584866   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:43.584771   11063 network.go:235] using free private subnet 192.168.39.0/24: &{IP:192.168.39.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.39.0/24 Gateway:192.168.39.1 ClientMin:192.168.39.2 ClientMax:192.168.39.254 Broadcast:192.168.39.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I0523 08:12:43.879213   10999 main.go:130] libmachine: (minikube) DBG | trying to create private KVM network mk-minikube 192.168.39.0/24...
+I0523 08:12:44.511522   10999 main.go:130] libmachine: (minikube) DBG | private KVM network mk-minikube 192.168.39.0/24 created
+I0523 08:12:44.511552   10999 main.go:130] libmachine: (minikube) Setting up store path in /home/iriartex/.minikube/machines/minikube ...
+I0523 08:12:44.511581   10999 main.go:130] libmachine: (minikube) Building disk image from file:///home/iriartex/.minikube/cache/iso/amd64/minikube-v1.25.2.iso
+I0523 08:12:44.511618   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:44.511489   11063 common.go:107] Making disk image using store path: /home/iriartex/.minikube
+I0523 08:12:44.511682   10999 main.go:130] libmachine: (minikube) Downloading /home/iriartex/.minikube/cache/boot2docker.iso from file:///home/iriartex/.minikube/cache/iso/amd64/minikube-v1.25.2.iso...
+I0523 08:12:49.882973   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:49.882816   11063 common.go:114] Creating ssh key: /home/iriartex/.minikube/machines/minikube/id_rsa...
+I0523 08:12:49.988641   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:49.988516   11063 common.go:120] Creating raw disk image: /home/iriartex/.minikube/machines/minikube/minikube.rawdisk...
+I0523 08:12:49.988664   10999 main.go:130] libmachine: (minikube) DBG | Writing magic tar header
+I0523 08:12:49.988682   10999 main.go:130] libmachine: (minikube) DBG | Writing SSH key tar header
+I0523 08:12:49.988695   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:49.988610   11063 common.go:134] Fixing permissions on /home/iriartex/.minikube/machines/minikube ...
+I0523 08:12:50.170643   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex/.minikube/machines/minikube
+I0523 08:12:50.170672   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex/.minikube/machines
+I0523 08:12:50.170694   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex/.minikube
+I0523 08:12:50.170722   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex/.minikube/machines/minikube (perms=drwx------)
+I0523 08:12:50.170736   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex/.minikube/machines (perms=drwxr-xr-x)
+I0523 08:12:50.170754   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex/.minikube (perms=drwxr-xr-x)
+I0523 08:12:50.193144   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex
+I0523 08:12:50.193199   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home
+I0523 08:12:50.193216   10999 main.go:130] libmachine: (minikube) DBG | Skipping /home - not owner
+I0523 08:12:50.193237   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex (perms=drwx--x--x)
+I0523 08:12:50.193260   10999 main.go:130] libmachine: (minikube) Creating domain...
+I0523 08:12:50.210312   10999 main.go:130] libmachine: (minikube) define libvirt domain using xml: 
+I0523 08:12:50.210349   10999 main.go:130] libmachine: (minikube) <domain type='kvm'>
+I0523 08:12:50.210375   10999 main.go:130] libmachine: (minikube)   <name>minikube</name>
+I0523 08:12:50.210406   10999 main.go:130] libmachine: (minikube)   <memory unit='MiB'>2200</memory>
+I0523 08:12:50.210513   10999 main.go:130] libmachine: (minikube)   <vcpu>2</vcpu>
+I0523 08:12:50.210541   10999 main.go:130] libmachine: (minikube)   <features>
+I0523 08:12:50.210557   10999 main.go:130] libmachine: (minikube)     <acpi/>
+I0523 08:12:50.210567   10999 main.go:130] libmachine: (minikube)     <apic/>
+I0523 08:12:50.210579   10999 main.go:130] libmachine: (minikube)     <pae/>
+I0523 08:12:50.210587   10999 main.go:130] libmachine: (minikube)     
+I0523 08:12:50.210602   10999 main.go:130] libmachine: (minikube)   </features>
+I0523 08:12:50.210620   10999 main.go:130] libmachine: (minikube)   <cpu mode='host-passthrough'>
+I0523 08:12:50.210638   10999 main.go:130] libmachine: (minikube)   
+I0523 08:12:50.210646   10999 main.go:130] libmachine: (minikube)   </cpu>
+I0523 08:12:50.210658   10999 main.go:130] libmachine: (minikube)   <os>
+I0523 08:12:50.210667   10999 main.go:130] libmachine: (minikube)     <type>hvm</type>
+I0523 08:12:50.210683   10999 main.go:130] libmachine: (minikube)     <boot dev='cdrom'/>
+I0523 08:12:50.210699   10999 main.go:130] libmachine: (minikube)     <boot dev='hd'/>
+I0523 08:12:50.210717   10999 main.go:130] libmachine: (minikube)     <bootmenu enable='no'/>
+I0523 08:12:50.210726   10999 main.go:130] libmachine: (minikube)   </os>
+I0523 08:12:50.210738   10999 main.go:130] libmachine: (minikube)   <devices>
+I0523 08:12:50.210748   10999 main.go:130] libmachine: (minikube)     <disk type='file' device='cdrom'>
+I0523 08:12:50.210769   10999 main.go:130] libmachine: (minikube)       <source file='/home/iriartex/.minikube/machines/minikube/boot2docker.iso'/>
+I0523 08:12:50.210791   10999 main.go:130] libmachine: (minikube)       <target dev='hdc' bus='scsi'/>
+I0523 08:12:50.210813   10999 main.go:130] libmachine: (minikube)       <readonly/>
+I0523 08:12:50.210822   10999 main.go:130] libmachine: (minikube)     </disk>
+I0523 08:12:50.210837   10999 main.go:130] libmachine: (minikube)     <disk type='file' device='disk'>
+I0523 08:12:50.210853   10999 main.go:130] libmachine: (minikube)       <driver name='qemu' type='raw' cache='default' io='threads' />
+I0523 08:12:50.210869   10999 main.go:130] libmachine: (minikube)       <source file='/home/iriartex/.minikube/machines/minikube/minikube.rawdisk'/>
+I0523 08:12:50.210883   10999 main.go:130] libmachine: (minikube)       <target dev='hda' bus='virtio'/>
+I0523 08:12:50.210892   10999 main.go:130] libmachine: (minikube)     </disk>
+I0523 08:12:50.210905   10999 main.go:130] libmachine: (minikube)     <interface type='network'>
+I0523 08:12:50.210918   10999 main.go:130] libmachine: (minikube)       <source network='mk-minikube'/>
+I0523 08:12:50.210930   10999 main.go:130] libmachine: (minikube)       <model type='virtio'/>
+I0523 08:12:50.210980   10999 main.go:130] libmachine: (minikube)     </interface>
+I0523 08:12:50.210996   10999 main.go:130] libmachine: (minikube)     <interface type='network'>
+I0523 08:12:50.211010   10999 main.go:130] libmachine: (minikube)       <source network='default'/>
+I0523 08:12:50.211020   10999 main.go:130] libmachine: (minikube)       <model type='virtio'/>
+I0523 08:12:50.211032   10999 main.go:130] libmachine: (minikube)     </interface>
+I0523 08:12:50.211041   10999 main.go:130] libmachine: (minikube)     <serial type='pty'>
+I0523 08:12:50.211054   10999 main.go:130] libmachine: (minikube)       <target port='0'/>
+I0523 08:12:50.211067   10999 main.go:130] libmachine: (minikube)     </serial>
+I0523 08:12:50.211079   10999 main.go:130] libmachine: (minikube)     <console type='pty'>
+I0523 08:12:50.211089   10999 main.go:130] libmachine: (minikube)       <target type='serial' port='0'/>
+I0523 08:12:50.211106   10999 main.go:130] libmachine: (minikube)     </console>
+I0523 08:12:50.211116   10999 main.go:130] libmachine: (minikube)     <rng model='virtio'>
+I0523 08:12:50.211145   10999 main.go:130] libmachine: (minikube)       <backend model='random'>/dev/random</backend>
+I0523 08:12:50.211156   10999 main.go:130] libmachine: (minikube)     </rng>
+I0523 08:12:50.211167   10999 main.go:130] libmachine: (minikube)     
+I0523 08:12:50.211174   10999 main.go:130] libmachine: (minikube)     
+I0523 08:12:50.211185   10999 main.go:130] libmachine: (minikube)   </devices>
+I0523 08:12:50.211193   10999 main.go:130] libmachine: (minikube) </domain>
+I0523 08:12:50.211209   10999 main.go:130] libmachine: (minikube) 
+I0523 08:12:50.851380   10999 main.go:130] libmachine: (minikube) DBG | domain minikube has defined MAC address 52:54:00:db:9d:e6 in network default
+I0523 08:12:50.852533   10999 main.go:130] libmachine: (minikube) Ensuring networks are active...
+I0523 08:12:50.852561   10999 main.go:130] libmachine: (minikube) DBG | domain minikube has defined MAC address 52:54:00:f8:5b:50 in network mk-minikube
+I0523 08:12:50.867649   10999 main.go:130] libmachine: (minikube) Ensuring network default is active
+I0523 08:12:50.914013   10999 main.go:130] libmachine: (minikube) DBG | unable to start VM: ensuring active networks: starting network default: virError(Code=1, Domain=0, Message='internal error: Network is already in use by interface wlp2s0')
+I0523 08:12:50.914370   10999 client.go:171] LocalClient.Create took 7.381800552s
+I0523 08:12:52.915292   10999 start.go:129] duration metric: createHost completed in 9.594669205s
+I0523 08:12:52.915313   10999 start.go:80] releasing machines lock for "minikube", held for 9.594778852s
+W0523 08:12:52.915366   10999 start.go:570] error starting host: creating host: create: Error creating machine: Error in driver during machine creation: ensuring active networks: starting network default: virError(Code=1, Domain=0, Message='internal error: Network is already in use by interface wlp2s0')
+I0523 08:12:52.938333   10999 main.go:130] libmachine: Found binary path at /usr/bin/docker-machine-driver-kvm2
+I0523 08:12:52.938395   10999 main.go:130] libmachine: Launching plugin server for driver kvm2
+I0523 08:12:53.172933   10999 main.go:130] libmachine: Plugin server listening at address 127.0.0.1:44939
+I0523 08:12:53.192491   10999 main.go:130] libmachine: () Calling .GetVersion
+I0523 08:12:53.193307   10999 main.go:130] libmachine: Using API Version  1
+I0523 08:12:53.193330   10999 main.go:130] libmachine: () Calling .SetConfigRaw
+I0523 08:12:53.193820   10999 main.go:130] libmachine: () Calling .GetMachineName
+I0523 08:12:53.194748   10999 main.go:130] libmachine: Found binary path at /usr/bin/docker-machine-driver-kvm2
+I0523 08:12:53.194800   10999 main.go:130] libmachine: Launching plugin server for driver kvm2
+I0523 08:12:53.223216   10999 main.go:130] libmachine: Plugin server listening at address 127.0.0.1:45769
+I0523 08:12:53.223807   10999 main.go:130] libmachine: () Calling .GetVersion
+I0523 08:12:53.224660   10999 main.go:130] libmachine: Using API Version  1
+I0523 08:12:53.224688   10999 main.go:130] libmachine: () Calling .SetConfigRaw
+I0523 08:12:53.225184   10999 main.go:130] libmachine: () Calling .GetMachineName
+I0523 08:12:53.225483   10999 main.go:130] libmachine: (minikube) Calling .GetState
+I0523 08:12:53.233517   10999 main.go:130] libmachine: (minikube) Calling .DriverName
+I0523 08:12:53.322061   10999 out.go:176] 🔥  Deleting "minikube" in kvm2 ...
+I0523 08:12:53.322289   10999 main.go:130] libmachine: (minikube) Calling .Remove
+I0523 08:12:53.322742   10999 main.go:130] libmachine: (minikube) DBG | Removing machine...
+I0523 08:12:53.339453   10999 main.go:130] libmachine: (minikube) DBG | Trying to delete the networks (if possible)
+I0523 08:12:53.355254   10999 main.go:130] libmachine: (minikube) DBG | Checking if network mk-minikube exists...
+I0523 08:12:53.355596   10999 main.go:130] libmachine: (minikube) DBG | Network mk-minikube exists
+I0523 08:12:53.355630   10999 main.go:130] libmachine: (minikube) DBG | Trying to list all domains...
+I0523 08:12:53.355855   10999 main.go:130] libmachine: (minikube) DBG | Listed all domains: total of 7 domains
+I0523 08:12:53.355884   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.355933   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: minikube
+I0523 08:12:53.355946   10999 main.go:130] libmachine: (minikube) DBG | Skipping domain as it is us...
+I0523 08:12:53.355975   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.355995   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: Arch_Linux
+I0523 08:12:53.356032   10999 main.go:130] libmachine: (minikube) DBG | Getting XML for domain Arch_Linux...
+I0523 08:12:53.356651   10999 main.go:130] libmachine: (minikube) DBG | Got XML for domain Arch_Linux
+I0523 08:12:53.406104   10999 main.go:130] libmachine: (minikube) DBG | Unmarshaled XML for domain Arch_Linux: kvm.result{Name:"Arch_Linux", Interfaces:[]kvm.iface{kvm.iface{Source:kvm.source{Network:"network2"}}}}
+I0523 08:12:53.406135   10999 main.go:130] libmachine: (minikube) DBG | domain Arch_Linux does not use network mk-minikube
+I0523 08:12:53.406155   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.406171   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: win8.1
+I0523 08:12:53.406199   10999 main.go:130] libmachine: (minikube) DBG | Getting XML for domain win8.1...
+I0523 08:12:53.406850   10999 main.go:130] libmachine: (minikube) DBG | Got XML for domain win8.1
+I0523 08:12:53.407831   10999 main.go:130] libmachine: (minikube) DBG | Unmarshaled XML for domain win8.1: kvm.result{Name:"win8.1", Interfaces:[]kvm.iface{kvm.iface{Source:kvm.source{Network:"default"}}}}
+I0523 08:12:53.407860   10999 main.go:130] libmachine: (minikube) DBG | domain win8.1 does not use network mk-minikube
+I0523 08:12:53.407881   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.407894   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: WEB-Server
+I0523 08:12:53.407915   10999 main.go:130] libmachine: (minikube) DBG | Getting XML for domain WEB-Server...
+I0523 08:12:53.408246   10999 main.go:130] libmachine: (minikube) DBG | Got XML for domain WEB-Server
+I0523 08:12:53.408965   10999 main.go:130] libmachine: (minikube) DBG | Unmarshaled XML for domain WEB-Server: kvm.result{Name:"WEB-Server", Interfaces:[]kvm.iface{kvm.iface{Source:kvm.source{Network:"network2"}}}}
+I0523 08:12:53.408985   10999 main.go:130] libmachine: (minikube) DBG | domain WEB-Server does not use network mk-minikube
+I0523 08:12:53.409002   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.409016   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: dudeserver
+I0523 08:12:53.409038   10999 main.go:130] libmachine: (minikube) DBG | Getting XML for domain dudeserver...
+I0523 08:12:53.409378   10999 main.go:130] libmachine: (minikube) DBG | Got XML for domain dudeserver
+I0523 08:12:53.409926   10999 main.go:130] libmachine: (minikube) DBG | Unmarshaled XML for domain dudeserver: kvm.result{Name:"dudeserver", Interfaces:[]kvm.iface{kvm.iface{Source:kvm.source{Network:"default"}}}}
+I0523 08:12:53.409947   10999 main.go:130] libmachine: (minikube) DBG | domain dudeserver does not use network mk-minikube
+I0523 08:12:53.409965   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.409985   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: ubuntu20.04
+I0523 08:12:53.410008   10999 main.go:130] libmachine: (minikube) DBG | Getting XML for domain ubuntu20.04...
+I0523 08:12:53.410380   10999 main.go:130] libmachine: (minikube) DBG | Got XML for domain ubuntu20.04
+I0523 08:12:53.411037   10999 main.go:130] libmachine: (minikube) DBG | Unmarshaled XML for domain ubuntu20.04: kvm.result{Name:"ubuntu20.04", Interfaces:[]kvm.iface{kvm.iface{Source:kvm.source{Network:"default-02"}}}}
+I0523 08:12:53.411063   10999 main.go:130] libmachine: (minikube) DBG | domain ubuntu20.04 does not use network mk-minikube
+I0523 08:12:53.411085   10999 main.go:130] libmachine: (minikube) DBG | Trying to get name of domain...
+I0523 08:12:53.411100   10999 main.go:130] libmachine: (minikube) DBG | Got domain name: centos7.0
+I0523 08:12:53.411124   10999 main.go:130] libmachine: (minikube) DBG | Getting XML for domain centos7.0...
+I0523 08:12:53.411546   10999 main.go:130] libmachine: (minikube) DBG | Got XML for domain centos7.0
+I0523 08:12:53.412364   10999 main.go:130] libmachine: (minikube) DBG | Unmarshaled XML for domain centos7.0: kvm.result{Name:"centos7.0", Interfaces:[]kvm.iface{kvm.iface{Source:kvm.source{Network:"network2"}}}}
+I0523 08:12:53.412389   10999 main.go:130] libmachine: (minikube) DBG | domain centos7.0 does not use network mk-minikube
+I0523 08:12:53.412414   10999 main.go:130] libmachine: (minikube) DBG | Trying to delete network mk-minikube...
+I0523 08:12:53.412587   10999 main.go:130] libmachine: (minikube) DBG | Destroying active network mk-minikube
+I0523 08:12:53.568121   10999 main.go:130] libmachine: (minikube) DBG | Undefining inactive network mk-minikube
+W0523 08:12:53.957672   10999 out.go:241] 🤦  StartHost failed, but will try again: creating host: create: Error creating machine: Error in driver during machine creation: ensuring active networks: starting network default: virError(Code=1, Domain=0, Message='internal error: Network is already in use by interface wlp2s0')
+I0523 08:12:53.960618   10999 main.go:130] libmachine: (minikube) Successfully deleted networks
+I0523 08:12:53.960638   10999 main.go:130] libmachine: (minikube) DBG | Network mk-minikube deleted
+I0523 08:12:53.960659   10999 start.go:585] Will try again in 5 seconds ...
+I0523 08:12:53.960708   10999 main.go:130] libmachine: (minikube) Domain minikube exists, removing...
+I0523 08:12:53.960783   10999 main.go:130] libmachine: (minikube) Domain minikube already destroyed, skipping...
+I0523 08:12:53.960823   10999 main.go:130] libmachine: (minikube) DBG | Checking if the domain needs to be deleted
+I0523 08:12:53.960854   10999 main.go:130] libmachine: (minikube) DBG | skip deleting static IP from network mk-minikube - couldn't find host DHCP lease matching {name: "", mac: "", ip: ""}
+I0523 08:12:53.960870   10999 main.go:130] libmachine: (minikube) Removing static IP address...
+I0523 08:12:53.960886   10999 main.go:130] libmachine: (minikube) Removed static IP address
+I0523 08:12:58.961049   10999 start.go:313] acquiring machines lock for minikube: {Name:mk76b6fd7a0d20d7e1a6b974d28432c6547ee490 Clock:{} Delay:500ms Timeout:13m0s Cancel:<nil>}
+I0523 08:12:58.961216   10999 start.go:317] acquired machines lock for "minikube" in 137.108µs
+I0523 08:12:58.961256   10999 start.go:89] Provisioning new machine with config: &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO:https://storage.googleapis.com/minikube/iso/minikube-v1.25.2.iso KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.30@sha256:02c921df998f95e849058af14de7045efc3954d90320967418a0d1f182bbc0b2 Memory:2200 CPUs:2 DiskSize:20000 VMDriver: Driver:kvm2 HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.23.3 ClusterName:minikube Namespace:default APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin: FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: ExtraOptions:[{Component:kubelet Key:housekeeping-interval Value:5m}] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI: NodeIP: NodePort:8443 NodeName:} Nodes:[{Name: IP: Port:8443 KubernetesVersion:v1.23.3 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/iriartex:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false} &{Name: IP: Port:8443 KubernetesVersion:v1.23.3 ContainerRuntime:docker ControlPlane:true Worker:true}
+I0523 08:12:58.961382   10999 start.go:126] createHost starting for "" (driver="kvm2")
+I0523 08:12:59.025952   10999 out.go:203] 🔥  Creating kvm2 VM (CPUs=2, Memory=2200MB, Disk=20000MB) ...
+I0523 08:12:59.026289   10999 main.go:130] libmachine: Found binary path at /usr/bin/docker-machine-driver-kvm2
+I0523 08:12:59.026352   10999 main.go:130] libmachine: Launching plugin server for driver kvm2
+I0523 08:12:59.054081   10999 main.go:130] libmachine: Plugin server listening at address 127.0.0.1:41785
+I0523 08:12:59.054700   10999 main.go:130] libmachine: () Calling .GetVersion
+I0523 08:12:59.055378   10999 main.go:130] libmachine: Using API Version  1
+I0523 08:12:59.055403   10999 main.go:130] libmachine: () Calling .SetConfigRaw
+I0523 08:12:59.055979   10999 main.go:130] libmachine: () Calling .GetMachineName
+I0523 08:12:59.056261   10999 main.go:130] libmachine: (minikube) Calling .GetMachineName
+I0523 08:12:59.056501   10999 main.go:130] libmachine: (minikube) Calling .DriverName
+I0523 08:12:59.056750   10999 start.go:160] libmachine.API.Create for "minikube" (driver="kvm2")
+I0523 08:12:59.056787   10999 client.go:168] LocalClient.Create starting
+I0523 08:12:59.056834   10999 main.go:130] libmachine: Reading certificate data from /home/iriartex/.minikube/certs/ca.pem
+I0523 08:12:59.065834   10999 main.go:130] libmachine: Decoding PEM data...
+I0523 08:12:59.065881   10999 main.go:130] libmachine: Parsing certificate...
+I0523 08:12:59.065984   10999 main.go:130] libmachine: Reading certificate data from /home/iriartex/.minikube/certs/cert.pem
+I0523 08:12:59.067477   10999 main.go:130] libmachine: Decoding PEM data...
+I0523 08:12:59.067499   10999 main.go:130] libmachine: Parsing certificate...
+I0523 08:12:59.067535   10999 main.go:130] libmachine: Running pre-create checks...
+I0523 08:12:59.067546   10999 main.go:130] libmachine: (minikube) Calling .PreCreateCheck
+I0523 08:12:59.067958   10999 main.go:130] libmachine: (minikube) Calling .GetConfigRaw
+I0523 08:12:59.068651   10999 main.go:130] libmachine: Creating machine...
+I0523 08:12:59.068666   10999 main.go:130] libmachine: (minikube) Calling .Create
+I0523 08:12:59.068900   10999 main.go:130] libmachine: (minikube) Creating KVM machine...
+I0523 08:12:59.085367   10999 main.go:130] libmachine: (minikube) DBG | found existing default KVM network
+I0523 08:12:59.086892   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:59.086653   11163 network.go:288] reserving subnet 192.168.39.0 for 1m0s: &{mu:{state:0 sema:0} read:{v:{m:map[] amended:true}} dirty:map[192.168.39.0:0xc0000105f8] misses:0}
+I0523 08:12:59.086966   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:59.086830   11163 network.go:235] using free private subnet 192.168.39.0/24: &{IP:192.168.39.0 Netmask:255.255.255.0 Prefix:24 CIDR:192.168.39.0/24 Gateway:192.168.39.1 ClientMin:192.168.39.2 ClientMax:192.168.39.254 Broadcast:192.168.39.255 Interface:{IfaceName: IfaceIPv4: IfaceMTU:0 IfaceMAC:}}
+I0523 08:12:59.202590   10999 main.go:130] libmachine: (minikube) DBG | trying to create private KVM network mk-minikube 192.168.39.0/24...
+I0523 08:12:59.367859   10999 main.go:130] libmachine: (minikube) DBG | private KVM network mk-minikube 192.168.39.0/24 created
+I0523 08:12:59.367885   10999 main.go:130] libmachine: (minikube) Setting up store path in /home/iriartex/.minikube/machines/minikube ...
+I0523 08:12:59.367906   10999 main.go:130] libmachine: (minikube) Building disk image from file:///home/iriartex/.minikube/cache/iso/amd64/minikube-v1.25.2.iso
+I0523 08:12:59.367919   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:12:59.367866   11163 common.go:107] Making disk image using store path: /home/iriartex/.minikube
+I0523 08:12:59.368043   10999 main.go:130] libmachine: (minikube) Downloading /home/iriartex/.minikube/cache/boot2docker.iso from file:///home/iriartex/.minikube/cache/iso/amd64/minikube-v1.25.2.iso...
+I0523 08:13:03.339176   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:13:03.339048   11163 common.go:114] Creating ssh key: /home/iriartex/.minikube/machines/minikube/id_rsa...
+I0523 08:13:03.483493   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:13:03.483356   11163 common.go:120] Creating raw disk image: /home/iriartex/.minikube/machines/minikube/minikube.rawdisk...
+I0523 08:13:03.555304   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex/.minikube/machines/minikube (perms=drwx------)
+I0523 08:13:03.555334   10999 main.go:130] libmachine: (minikube) DBG | Writing magic tar header
+I0523 08:13:03.555352   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex/.minikube/machines (perms=drwxr-xr-x)
+I0523 08:13:03.555390   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex/.minikube (perms=drwxr-xr-x)
+I0523 08:13:03.555405   10999 main.go:130] libmachine: (minikube) DBG | Writing SSH key tar header
+I0523 08:13:03.555418   10999 main.go:130] libmachine: (minikube) Setting executable bit set on /home/iriartex (perms=drwx--x--x)
+I0523 08:13:03.555435   10999 main.go:130] libmachine: (minikube) Creating domain...
+I0523 08:13:03.555460   10999 main.go:130] libmachine: (minikube) DBG | I0523 08:13:03.483452   11163 common.go:134] Fixing permissions on /home/iriartex/.minikube/machines/minikube ...
+I0523 08:13:03.555478   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex/.minikube/machines/minikube
+I0523 08:13:03.555493   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex/.minikube/machines
+I0523 08:13:03.555506   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex/.minikube
+I0523 08:13:03.555521   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home/iriartex
+I0523 08:13:03.555532   10999 main.go:130] libmachine: (minikube) DBG | Checking permissions on dir: /home
+I0523 08:13:03.555607   10999 main.go:130] libmachine: (minikube) DBG | Skipping /home - not owner
+I0523 08:13:03.613173   10999 main.go:130] libmachine: (minikube) define libvirt domain using xml: 
+I0523 08:13:03.613206   10999 main.go:130] libmachine: (minikube) <domain type='kvm'>
+I0523 08:13:03.613229   10999 main.go:130] libmachine: (minikube)   <name>minikube</name>
+I0523 08:13:03.613255   10999 main.go:130] libmachine: (minikube)   <memory unit='MiB'>2200</memory>
+I0523 08:13:03.613280   10999 main.go:130] libmachine: (minikube)   <vcpu>2</vcpu>
+I0523 08:13:03.613314   10999 main.go:130] libmachine: (minikube)   <features>
+I0523 08:13:03.613337   10999 main.go:130] libmachine: (minikube)     <acpi/>
+I0523 08:13:03.613352   10999 main.go:130] libmachine: (minikube)     <apic/>
+I0523 08:13:03.613371   10999 main.go:130] libmachine: (minikube)     <pae/>
+I0523 08:13:03.613391   10999 main.go:130] libmachine: (minikube)     
+I0523 08:13:03.613408   10999 main.go:130] libmachine: (minikube)   </features>
+I0523 08:13:03.613423   10999 main.go:130] libmachine: (minikube)   <cpu mode='host-passthrough'>
+I0523 08:13:03.613439   10999 main.go:130] libmachine: (minikube)   
+I0523 08:13:03.613454   10999 main.go:130] libmachine: (minikube)   </cpu>
+I0523 08:13:03.613479   10999 main.go:130] libmachine: (minikube)   <os>
+I0523 08:13:03.613494   10999 main.go:130] libmachine: (minikube)     <type>hvm</type>
+I0523 08:13:03.613513   10999 main.go:130] libmachine: (minikube)     <boot dev='cdrom'/>
+I0523 08:13:03.613532   10999 main.go:130] libmachine: (minikube)     <boot dev='hd'/>
+I0523 08:13:03.613552   10999 main.go:130] libmachine: (minikube)     <bootmenu enable='no'/>
+I0523 08:13:03.613565   10999 main.go:130] libmachine: (minikube)   </os>
+I0523 08:13:03.613584   10999 main.go:130] libmachine: (minikube)   <devices>
+I0523 08:13:03.613608   10999 main.go:130] libmachine: (minikube)     <disk type='file' device='cdrom'>
+I0523 08:13:03.613635   10999 main.go:130] libmachine: (minikube)       <source file='/home/iriartex/.minikube/machines/minikube/boot2docker.iso'/>
+I0523 08:13:03.613653   10999 main.go:130] libmachine: (minikube)       <target dev='hdc' bus='scsi'/>
+I0523 08:13:03.613678   10999 main.go:130] libmachine: (minikube)       <readonly/>
+I0523 08:13:03.613702   10999 main.go:130] libmachine: (minikube)     </disk>
+I0523 08:13:03.613726   10999 main.go:130] libmachine: (minikube)     <disk type='file' device='disk'>
+I0523 08:13:03.613748   10999 main.go:130] libmachine: (minikube)       <driver name='qemu' type='raw' cache='default' io='threads' />
+I0523 08:13:03.613803   10999 main.go:130] libmachine: (minikube)       <source file='/home/iriartex/.minikube/machines/minikube/minikube.rawdisk'/>
+I0523 08:13:03.613831   10999 main.go:130] libmachine: (minikube)       <target dev='hda' bus='virtio'/>
+I0523 08:13:03.613851   10999 main.go:130] libmachine: (minikube)     </disk>
+I0523 08:13:03.613863   10999 main.go:130] libmachine: (minikube)     <interface type='network'>
+I0523 08:13:03.613879   10999 main.go:130] libmachine: (minikube)       <source network='mk-minikube'/>
+I0523 08:13:03.613926   10999 main.go:130] libmachine: (minikube)       <model type='virtio'/>
+I0523 08:13:03.613940   10999 main.go:130] libmachine: (minikube)     </interface>
+I0523 08:13:03.613954   10999 main.go:130] libmachine: (minikube)     <interface type='network'>
+I0523 08:13:03.613967   10999 main.go:130] libmachine: (minikube)       <source network='default'/>
+I0523 08:13:03.613989   10999 main.go:130] libmachine: (minikube)       <model type='virtio'/>
+I0523 08:13:03.614003   10999 main.go:130] libmachine: (minikube)     </interface>
+I0523 08:13:03.614016   10999 main.go:130] libmachine: (minikube)     <serial type='pty'>
+I0523 08:13:03.614026   10999 main.go:130] libmachine: (minikube)       <target port='0'/>
+I0523 08:13:03.614038   10999 main.go:130] libmachine: (minikube)     </serial>
+I0523 08:13:03.614051   10999 main.go:130] libmachine: (minikube)     <console type='pty'>
+I0523 08:13:03.614067   10999 main.go:130] libmachine: (minikube)       <target type='serial' port='0'/>
+I0523 08:13:03.614080   10999 main.go:130] libmachine: (minikube)     </console>
+I0523 08:13:03.614093   10999 main.go:130] libmachine: (minikube)     <rng model='virtio'>
+I0523 08:13:03.614107   10999 main.go:130] libmachine: (minikube)       <backend model='random'>/dev/random</backend>
+I0523 08:13:03.614119   10999 main.go:130] libmachine: (minikube)     </rng>
+I0523 08:13:03.614128   10999 main.go:130] libmachine: (minikube)     
+I0523 08:13:03.614140   10999 main.go:130] libmachine: (minikube)     
+I0523 08:13:03.614149   10999 main.go:130] libmachine: (minikube)   </devices>
+I0523 08:13:03.614161   10999 main.go:130] libmachine: (minikube) </domain>
+I0523 08:13:03.614169   10999 main.go:130] libmachine: (minikube) 
+I0523 08:13:03.695525   10999 main.go:130] libmachine: (minikube) DBG | domain minikube has defined MAC address 52:54:00:90:35:be in network default
+I0523 08:13:03.696183   10999 main.go:130] libmachine: (minikube) DBG | domain minikube has defined MAC address 52:54:00:d0:db:63 in network mk-minikube
+I0523 08:13:03.696204   10999 main.go:130] libmachine: (minikube) Ensuring networks are active...
+I0523 08:13:03.709518   10999 main.go:130] libmachine: (minikube) Ensuring network default is active
+I0523 08:13:03.710844   10999 main.go:130] libmachine: (minikube) DBG | unable to start VM: ensuring active networks: starting network default: virError(Code=1, Domain=0, Message='internal error: Network is already in use by interface wlp2s0')
+I0523 08:13:03.711154   10999 client.go:171] LocalClient.Create took 4.654353151s
+I0523 08:13:05.712175   10999 start.go:129] duration metric: createHost completed in 6.750753627s
+I0523 08:13:05.712200   10999 start.go:80] releasing machines lock for "minikube", held for 6.750972829s
+W0523 08:13:05.712553   10999 out.go:241] 😿  Failed to start kvm2 VM. Running "minikube delete" may fix it: creating host: create: Error creating machine: Error in driver during machine creation: ensuring active networks: starting network default: virError(Code=1, Domain=0, Message='internal error: Network is already in use by interface wlp2s0')
+I0523 08:13:05.816341   10999 out.go:176] 
+W0523 08:13:05.816600   10999 out.go:241] ❌  Exiting due to GUEST_PROVISION: Failed to start host: creating host: create: Error creating machine: Error in driver during machine creation: ensuring active networks: starting network default: virError(Code=1, Domain=0, Message='internal error: Network is already in use by interface wlp2s0')
+W0523 08:13:05.816627   10999 out.go:241] 
+W0523 08:13:05.854904   10999 out.go:241] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+
+* 

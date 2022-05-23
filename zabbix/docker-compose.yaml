@@ -1,0 +1,110 @@
+version: "3"
+services:
+  zabbix-mysql:
+    image: mysql/mysql-server:5.7.22
+    container_name: zabbix-mysql
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD="123456"
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD="123456"
+      - MYSQL_DATABASE=zabbix
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./var/lib/mysql:/var/lib/mysql:rw
+      - ./etc/mysql/my.cnf:/etc/mysql/my.cnf:rw
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      network_zabbix:
+        ipv4_address: 192.168.137.136
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
+    deploy:
+      resources:
+        limits:
+          cpus: '0.70'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+  zabbix-web-apache-mysql:
+    image: zabbix/zabbix-web-apache-mysql:centos-latest
+    container_name: zabbix-web-apache-mysql
+    environment:
+      - DB_SERVER_HOST=zabbix-mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD="123456"
+      - ZBX_SERVER_HOST=zabbix-server-mysql
+      - PHP_TZ=Asia/Shanghai
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - '80:80'
+      - '443:443'
+    links:
+      - zabbix-mysql
+      - zabbix-server-mysql
+    depends_on:
+      - zabbix-mysql
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      network_zabbix:
+        ipv4_address: 192.168.137.108
+  zabbix-server-mysql:
+    image: zabbix/zabbix-server-mysql:centos-latest
+    container_name: zabbix-server-mysql
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+#      - ./etc/zabbix/zabbix_server.conf:/etc/zabbix/zabbix_server.conf:rw
+#      - ./usr/local/etc/zabbix_server.conf.d/:/usr/local/etc/zabbix_server.conf.d/:rw
+      - ./usr/lib/zabbix/alertscripts:/usr/lib/zabbix/alertscripts:rw
+      - ./usr/lib/zabbix/externalscripts:/usr/lib/zabbix/externalscripts:rw
+      - ./var/lib/zabbix/modules:/var/lib/zabbix/modules:rw
+      - ./var/lib/zabbix/enc:/var/lib/zabbix/enc:rw
+      - ./var/lib/zabbix/ssl/keys:/var/lib/zabbix/ssl/keys:rw
+      - ./var/lib/zabbix/ssl/certs:/var/lib/zabbix/ssl/certs:rw
+      - ./var/lib/zabbix/ssh_keys:/var/lib/zabbix/ssh_keys:rw
+      - ./var/lib/zabbix/ssl/ssl_ca:/var/lib/zabbix/ssl/ssl_ca:rw
+      - ./var/lib/zabbix/snmptraps:/var/lib/zabbix/snmptraps:rw
+      - ./var/lib/zabbix/mibs:/var/lib/zabbix/mibs:rw
+    environment:
+      - DB_SERVER_HOST=zabbix-mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD="123456"
+    ports:
+      - '10051:10051'
+    links:
+      - zabbix-mysql
+    depends_on:
+      - zabbix-mysql
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      network_zabbix:
+        ipv4_address: 192.168.137.128
+ 
+networks:
+  network_zabbix:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.137.0/24
