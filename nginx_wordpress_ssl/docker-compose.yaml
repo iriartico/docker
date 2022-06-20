@@ -37,10 +37,10 @@ services:
       - ./db_data:/var/lib/mysql
       - ./backups:/backups
     environment:
-      MYSQL_DATABASE: wpgdemo
-      MYSQL_USER: wpgdemo_user
-      MYSQL_PASSWORD: chocolate**(123)**
-      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: db_wordpress
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin123
+      MYSQL_ROOT_PASSWORD: root
 
   wordpress:
     image: wordpress:6.0.0-php7.4-apache
@@ -58,12 +58,12 @@ services:
       - ./wp-data:/var/www/html
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_NAME: wpgdemo
-      WORDPRESS_DB_USER: wpgdemo_user
-      WORDPRESS_DB_PASSWORD: chocolate**(123)**
-      VIRTUAL_HOST: amantesdelciclismo.tk,www.amantesdelciclismo.tk
-      LETSENCRYPT_HOST: amantesdelciclismo.tk,www.amantesdelciclismo.tk
-      LETSENCRYPT_EMAIL: jcolivera2000@gmail.com
+      WORDPRESS_DB_NAME: db_wordpress
+      WORDPRESS_DB_USER: admin
+      WORDPRESS_DB_PASSWORD: admin123
+      VIRTUAL_HOST: midominio.com,www.midominio.com
+      LETSENCRYPT_HOST: midominio.com,www.midominio.com
+      LETSENCRYPT_EMAIL: admin@ejemplo.com
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:5.2
