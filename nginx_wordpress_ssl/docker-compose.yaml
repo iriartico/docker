@@ -1,0 +1,86 @@
+version: '3.7'
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx-proxy
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - certs:/etc/nginx/certs:ro
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+    labels:
+      - com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: letsencrypt
+    restart: always
+    environment:
+      - NGINX_PROXY_CONTAINER=nginx-proxy
+    volumes:
+      - certs:/etc/nginx/certs:rw
+      - vhostd:/etc/nginx/vhost.d
+      - html:/usr/share/nginx/html
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+
+  db:
+    image: mariadb:10.8
+    container_name: db
+    restart: always
+    volumes:
+      - ./db_data:/var/lib/mysql
+      - ./backups:/backups
+    environment:
+      MYSQL_DATABASE: wpgdemo
+      MYSQL_USER: wpgdemo_user
+      MYSQL_PASSWORD: chocolate**(123)**
+      MYSQL_ROOT_PASSWORD: toor
+
+  wordpress:
+    image: wordpress:6.0.0-php7.4-apache
+    container_name: wp
+    restart: always
+    depends_on: 
+      - db
+      - nginx-proxy
+      - letsencrypt
+    links: ['db:db']
+    expose:
+      - "80"
+      - "443"
+    volumes:
+      - ./wp-data:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wpgdemo
+      WORDPRESS_DB_USER: wpgdemo_user
+      WORDPRESS_DB_PASSWORD: chocolate**(123)**
+      VIRTUAL_HOST: amantesdelciclismo.tk,www.amantesdelciclismo.tk
+      LETSENCRYPT_HOST: amantesdelciclismo.tk,www.amantesdelciclismo.tk
+      LETSENCRYPT_EMAIL: jcolivera2000@gmail.com
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2
+    container_name: phpmyadmin
+    restart: always
+    depends_on: 
+      - db
+    ports:
+      - "12000:80"
+    links: ['db:db']
+    environment:
+      - PMA_HOST=db
+
+
+volumes:
+  db_data: {}
+  certs:
+  html:
+  vhostd:
+

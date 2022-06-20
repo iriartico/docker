@@ -1,0 +1,92 @@
+version: '3.7'
+
+services:
+
+  db:
+    image: mariadb:10
+    container_name: db
+    #restart: always
+    #volumes:
+    #  - ./db_data:/var/lib/mysql
+    #  - ./backups:/backups
+    environment:
+      MYSQL_DATABASE: wpgdemo
+      MYSQL_USER: wpgdemo_user
+      MYSQL_PASSWORD: chocolate(123)**
+      MYSQL_ROOT_PASSWORD: toor
+    networks:
+      servers:
+        ipv4_address: 172.20.20.2
+
+      
+  wordpress:
+    image: wordpress:5.9.3-php7.4
+    container_name: wp
+    depends_on: ['db']
+    links: ['db:db']
+    #volumes:
+    #  - ./wp-data:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wpgdemo
+      WORDPRESS_DB_USER: wpgdemo_user
+      WORDPRESS_DB_PASSWORD: chocolate(123)**
+    networks:
+      servers:
+        ipv4_address: 172.20.20.3
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    container_name: phpmyadmin
+    depends_on: ['db']
+    links: ['db:db']
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=wpgdemo_user
+      - PMA_PASSWORD=chocolate(123)**
+    networks:
+      servers:
+        ipv4_address: 172.20.20.4
+  
+  reverse_proxy:
+    image: nginx:1.15.7-alpine
+    container_name: reverse_proxy1
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      servers:
+        ipv4_address: 172.20.20.5
+
+  poste:
+    image: analogic/poste.io
+    container_name: poste
+    expose:
+      - 25
+      - 80
+      - 443
+      - 110
+      - 143
+      - 465
+      - 587
+      - 993
+      - 995
+    environment:
+      - HTTPS=ON
+      - DISABLE_CLAMAV=TRUE
+    networks:
+      servers:
+        ipv4_address: 172.20.20.10
+
+
+networks:
+  servers:
+    driver: bridge
+    driver_opts:
+      parent: eth0
+    ipam:
+      config:
+        - subnet: "172.20.20.0/24"
+          gateway: "172.20.20.1"
